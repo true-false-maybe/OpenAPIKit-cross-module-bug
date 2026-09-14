@@ -1,0 +1,14 @@
+name: Cross-Module-Optimization
+
+on:
+  push:
+    branches: ['**']
+
+jobs:
+  cross-module-optimization:
+    container:
+      image: swift:6.3
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - run: swift build -Xswiftc -cross-module-optimization
