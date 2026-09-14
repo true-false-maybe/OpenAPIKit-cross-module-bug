@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v5
-    - run: swift build -Xswiftc -cross-module-optimization
+    - run: swift build -c release -Xswiftc -cross-module-optimization
